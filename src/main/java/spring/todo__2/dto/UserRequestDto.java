@@ -4,7 +4,7 @@ import lombok.Getter;
 
 @Getter
 public class UserRequestDto {
-    public  Long name;
+    public  String name;
     private String email;
     private String password;
 }
