@@ -1,9 +1,6 @@
 package spring.todo__2.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -16,23 +13,20 @@ public class Todo extends BaseEntity {
     private Long id;
     private String title;
     private String detail;
-    private String name;
-    private String email;
-    private String password;
 
-    public Todo(String title, String detail, String name,String email, String password) {
+    @ManyToOne
+    @JoinColumn(name = "userId",nullable =false)
+    private User user;
+
+
+    public Todo(String title, String detail, User user) {
         this.title = title;
         this.detail = detail;
-        this.name = name;
-        this.email = email;
-        this.password = password;
+        this.user = user;
     }
 
-    public void update(String title, String detail, String name,String email, String password) {
+    public void update(String title, String detail) {
         this.title = title;
         this.detail = detail;
-        this.name = name;
-        this.email = email;
-        this.password = password;
     }
 }
