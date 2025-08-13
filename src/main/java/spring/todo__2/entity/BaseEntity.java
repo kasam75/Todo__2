@@ -1,4 +1,4 @@
-package spring.todo.entity;
+package spring.todo__2.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

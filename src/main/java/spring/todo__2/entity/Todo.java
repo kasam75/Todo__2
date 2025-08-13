@@ -1,4 +1,4 @@
-package spring.todo.entity;
+package spring.todo__2.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,19 +17,22 @@ public class Todo extends BaseEntity {
     private String title;
     private String detail;
     private String name;
+    private String email;
     private String password;
 
-    public Todo(String title, String detail, String name, String password) {
+    public Todo(String title, String detail, String name,String email, String password) {
         this.title = title;
         this.detail = detail;
         this.name = name;
+        this.email = email;
         this.password = password;
     }
 
-    public void update(String title, String detail, String name, String password) {
+    public void update(String title, String detail, String name,String email, String password) {
         this.title = title;
         this.detail = detail;
         this.name = name;
+        this.email = email;
         this.password = password;
     }
 }
