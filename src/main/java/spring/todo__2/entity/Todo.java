@@ -1,4 +1,4 @@
-package spring.todo__2;
+package spring.todo.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,32 +10,26 @@ import lombok.NoArgsConstructor;
 @Getter
 @Entity
 @NoArgsConstructor
-public class Todo extends BaseEntity{
+public class Todo extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String author;
     private String title;
     private String detail;
-    private String email;
+    private String name;
     private String password;
 
-    public Todo(Long id, String name, String author, String title, String detail, String email, String password) {
-        this.id = id;
-        this.name = name;
-        this.author = author;
+    public Todo(String title, String detail, String name, String password) {
         this.title = title;
         this.detail = detail;
-        this.email = email;
+        this.name = name;
         this.password = password;
     }
-    public void update(String name, String author, String title, String detail, String email, String password) {
-        this.name = name;
-        this.author = author;
+
+    public void update(String title, String detail, String name, String password) {
         this.title = title;
         this.detail = detail;
-        this.email = email;
+        this.name = name;
         this.password = password;
     }
 }

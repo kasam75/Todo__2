@@ -1,4 +1,4 @@
-package spring.todo__2;
+package spring.todo.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -16,9 +16,10 @@ public abstract class BaseEntity {
     @CreatedDate
     @Column(updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime createdDate;
+    private LocalDateTime createdAt;
 
     @LastModifiedDate
     @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime modifiedAt;
 }
+
