@@ -1,4 +1,4 @@
-package spring.todo_2.entity;
+package spring.todo__2;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package spring.todo_2.dto;
+package spring.todo__2;
 
 import lombok.Getter;
 
