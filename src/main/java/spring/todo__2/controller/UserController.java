@@ -11,8 +11,8 @@ import spring.todo__2.service.UserService;
 public class UserController {
     public final UserService userService;
 
-    @PostMapping("/users")
-    public UserResponseDto createUser(@RequestBody UserRequestDto requestDto) {
+    @PostMapping("/signup")
+    public UserResponseDto signup(@RequestBody UserRequestDto requestDto) {
         return userService.createUser(requestDto);
     }
 

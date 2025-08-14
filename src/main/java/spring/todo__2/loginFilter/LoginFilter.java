@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class LoginFilter implements Filter {
     // 인증을 하지 않아도될 URL Path 배열
-    private static final String[] WHITE_LIST = {"/", "/signup", "/login"};
+    private static final String[] WHITE_LIST = {"/", "/signup", "/login","/users/**"};
 
     @Override
     public void doFilter(
